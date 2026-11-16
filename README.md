@@ -3,7 +3,8 @@
 Static website for **Prime Energies (Pty) Ltd** — data, AI and energy technology for the industries that power South Africa.
 
 - `index.html` — Home
-- `solutions.html` — Mining Intelligence, Energy & Utilities, Enterprise Systems
+- `solutions.html` — overview of the three practices
+- `mining-intelligence.html`, `energy-utilities.html`, `enterprise-systems.html` — one page per practice
 - `platform.html` — Operations intelligence platform
 - `insights.html` — Market Pulse (curated industry news, each item linked to its source)
 - `company.html` — About, approach and credentials
