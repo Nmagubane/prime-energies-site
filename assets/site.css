@@ -1,0 +1,70 @@
+body{margin:0;background:#0A0E14}
+a{color:#B45309;text-decoration:none}a:hover{color:#92400E}
+*{box-sizing:border-box}
+@keyframes pe-drift{from{stroke-dashoffset:0}to{stroke-dashoffset:-160}}
+@keyframes pe-travel{from{stroke-dashoffset:1600}to{stroke-dashoffset:0}}
+@keyframes pe-pulse{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes pe-rise{from{transform:scaleY(.06)}to{transform:scaleY(1)}}
+@keyframes pe-draw{from{stroke-dashoffset:700}to{stroke-dashoffset:0}}
+@keyframes pe-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes pe-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.pe-terrain path{fill:none;stroke-dasharray:3 5;animation:pe-drift 14s linear infinite}
+.pe-route{stroke-dasharray:60 1540;animation:pe-travel 7s linear infinite}
+.pe-route2{stroke-dasharray:40 1560;animation:pe-travel 9s linear infinite;animation-delay:-3s}
+@keyframes pe-belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.pe-belt{display:flex;width:max-content;animation:pe-belt 70s linear infinite}
+.pe-ticker:hover .pe-belt{animation-play-state:paused}
+.pe-tick{color:#CBD2DD}.pe-tick:hover{color:#FFFFFF}
+.pe-live{animation:pe-pulse 1.8s ease-in-out infinite}
+.pe-bar{transform-origin:bottom;animation:pe-rise 1.3s cubic-bezier(.2,.8,.2,1) both}
+.pe-spark{stroke-dasharray:700;stroke-dashoffset:700;animation:pe-draw 2.2s ease-out forwards}
+.pe-float{animation:pe-float 7s ease-in-out infinite}
+.pe-in{animation:pe-in .9s ease-out both}
+.pe-card{transition:transform .25s ease,box-shadow .25s ease}
+.pe-card:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(10,14,20,.04),0 24px 56px rgba(10,14,20,.12)!important}
+.pe-btn{transition:background-color .2s ease}
+.pe-btn:hover{background-color:#FFB454!important}
+.pe-ghost{transition:background-color .2s ease}
+.pe-ghost:hover{background-color:rgba(255,255,255,.08)!important}
+.pe-tab:hover{color:#F3F4F6!important}
+.pe-navlink{transition:color .2s ease}
+.pe-navlink:hover{color:#FFFFFF!important}
+input,select,textarea{font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid #F59E0B;outline-offset:1px}
+button:focus-visible,a:focus-visible{outline:2px solid #F59E0B;outline-offset:3px}
+@media (max-width:760px){.pe-hide-sm{display:none!important}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.pe-spark{stroke-dashoffset:0}}
+
+@keyframes pe-belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pe-kb{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.08) translate(-1.5%,1%)}}
+@keyframes pe-spin{to{transform:rotate(360deg)}}
+@keyframes pe-spinr{to{transform:rotate(-360deg)}}
+@keyframes pe-floor{from{background-position:0 0}to{background-position:0 64px}}
+@keyframes pe-ping{0%{transform:scale(.2);opacity:.9}100%{transform:scale(3.2);opacity:0}}
+@keyframes pe-sweepx{from{transform:translateX(-30%)}to{transform:translateX(130%)}}
+@keyframes pe-chip{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.pe-belt{display:flex;width:max-content;animation:pe-belt 80s linear infinite}
+.pe-ticker:hover .pe-belt{animation-play-state:paused}
+.pe-tick{color:#CBD2DD}.pe-tick:hover{color:#FFFFFF}
+.pe-kb{animation:pe-kb 24s ease-in-out infinite alternate}
+.pe-spin{transform-box:fill-box;transform-origin:center;animation:pe-spin 90s linear infinite}
+.pe-spinr{transform-box:fill-box;transform-origin:center;animation:pe-spinr 120s linear infinite}
+.pe-floor{animation:pe-floor 2.4s linear infinite}
+.pe-ping{transform-box:fill-box;transform-origin:center;animation:pe-ping 3.6s ease-out infinite}
+.pe-pulse-line{stroke-dasharray:24 400;animation:pe-travel 5s linear infinite}
+.pe-chip{animation:pe-chip 6s ease-in-out infinite}
+.pe-beam{animation:pe-sweepx 7s linear infinite}
+.pe-d1{animation-delay:.12s}.pe-d2{animation-delay:.24s}.pe-d3{animation-delay:.36s}.pe-d4{animation-delay:.48s}
+.pe-newscard{transition:transform .25s ease,box-shadow .25s ease}
+.pe-newscard:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(10,14,20,.04),0 24px 56px rgba(10,14,20,.12)!important}
+.pe-more{transition:gap .2s ease}.pe-more:hover{gap:12px!important}
+
+.pe-tabbtn{text-align:left;background:none;border:none;border-radius:10px;color:#8D97A8;font-family:Inter,sans-serif;font-size:14px;font-weight:500;padding:11px 14px;min-height:44px;cursor:pointer}
+.pe-tabbtn:hover{color:#F3F4F6}
+.pe-tabbtn[aria-pressed="true"]{background-color:rgba(245,158,11,.12);color:#FCD34D;font-weight:600}
+[hidden]{display:none!important}
+.pe-menu-btn{display:none;align-items:center;gap:8px;background:none;border:1px solid rgba(255,255,255,.22);color:#FFFFFF;border-radius:999px;padding:10px 16px;min-height:44px;font:500 15px Inter,sans-serif;cursor:pointer}
+.pe-mobile-menu{position:relative;z-index:5;margin:0 24px 8px;background-color:rgba(17,23,34,.96);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:8px;display:flex;flex-direction:column}
+.pe-mobile-menu a{color:#E5E7EB;padding:14px 16px;border-radius:10px;font-size:16px}
+.pe-mobile-menu a:hover{background-color:rgba(255,255,255,.06);color:#FFFFFF}
+@media (max-width:760px){.pe-menu-btn{display:inline-flex}}
