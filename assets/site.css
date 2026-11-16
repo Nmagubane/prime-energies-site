@@ -83,7 +83,7 @@ nav > a.pe-btn{display:none!important}
 .pe-menu-btn[aria-expanded="true"] .pe-burger i:nth-child(2){opacity:0}
 .pe-menu-btn[aria-expanded="true"] .pe-burger i:nth-child(3){top:5px;transform:rotate(-45deg)}
 @keyframes pe-drop{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
-.pe-mobile-menu{position:absolute;left:12px;right:12px;top:calc(100% + 8px);background-color:rgba(13,18,28,.97);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:10px;box-shadow:0 30px 80px rgba(0,0,0,.55);animation:pe-drop .22s ease-out;display:flex;flex-direction:column}
+.pe-mobile-menu{position:absolute;left:12px;right:12px;top:calc(100% + 8px);background-color:#0D121C;border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:10px;box-shadow:0 30px 80px rgba(0,0,0,.55);animation:pe-drop .22s ease-out;display:flex;flex-direction:column}
 .pe-mobile-menu .pe-mm-link{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#E5E7EB;padding:15px 14px;border-radius:12px;font:500 17px 'Inter Tight',Inter,sans-serif;letter-spacing:-.01em}
 .pe-mobile-menu .pe-mm-link + .pe-mm-link{border-top:1px solid rgba(255,255,255,.06)}
 .pe-mobile-menu .pe-mm-link:hover{background-color:rgba(255,255,255,.05);color:#FFFFFF}
