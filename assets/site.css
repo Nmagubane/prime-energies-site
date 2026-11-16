@@ -60,6 +60,9 @@ button:focus-visible,a:focus-visible{outline:2px solid #F59E0B;outline-offset:3p
 .pe-more{transition:gap .2s ease}.pe-more:hover{gap:12px!important}
 @keyframes pe-in{from{opacity:.35;transform:translateY(14px)}to{opacity:1;transform:none}}
 .pe-in{animation-duration:.7s}
+.pe-pill{display:inline-flex;align-items:center;gap:10px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#FCD9A0;border:1px solid rgba(245,158,11,.35);border-radius:999px;padding:8px 16px;background-color:rgba(245,158,11,.08)}
+.pe-pill-dot{width:6px;height:6px;border-radius:50%;background-color:#F59E0B;flex-shrink:0;box-shadow:0 0 0 4px rgba(245,158,11,.18)}
+@media (max-width:760px){.pe-pill{font-size:10.5px;letter-spacing:.1em;padding:7px 12px}}
 @media (max-width:760px){
 nav > a.pe-btn{display:none!important}
 [aria-label="Console view"]{max-width:none!important;flex:1 1 100%!important;flex-direction:row!important;overflow-x:auto;border-right:none!important;border-bottom:1px solid rgba(255,255,255,.08);padding:10px!important}
@@ -72,8 +75,22 @@ nav > a.pe-btn{display:none!important}
 .pe-tabbtn:hover{color:#F3F4F6}
 .pe-tabbtn[aria-pressed="true"]{background-color:rgba(245,158,11,.12);color:#FCD34D;font-weight:600}
 [hidden]{display:none!important}
-.pe-menu-btn{display:none;align-items:center;gap:8px;background:none;border:1px solid rgba(255,255,255,.22);color:#FFFFFF;border-radius:999px;padding:10px 16px;min-height:44px;font:500 15px Inter,sans-serif;cursor:pointer}
-.pe-mobile-menu{position:relative;z-index:5;margin:0 24px 8px;background-color:rgba(17,23,34,.96);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:8px;display:flex;flex-direction:column}
-.pe-mobile-menu a{color:#E5E7EB;padding:14px 16px;border-radius:10px;font-size:16px}
-.pe-mobile-menu a:hover{background-color:rgba(255,255,255,.06);color:#FFFFFF}
+.pe-menu-btn{display:none;align-items:center;gap:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.18);color:#FFFFFF;border-radius:999px;padding:9px 16px 9px 14px;min-height:44px;font:500 15px Inter,sans-serif;cursor:pointer}
+.pe-burger{position:relative;width:16px;height:12px;display:inline-block}
+.pe-burger i{position:absolute;left:0;right:0;height:2px;border-radius:2px;background:#F59E0B;transition:transform .25s ease,opacity .2s ease,top .25s ease}
+.pe-burger i:nth-child(1){top:0}.pe-burger i:nth-child(2){top:5px}.pe-burger i:nth-child(3){top:10px}
+.pe-menu-btn[aria-expanded="true"] .pe-burger i:nth-child(1){top:5px;transform:rotate(45deg)}
+.pe-menu-btn[aria-expanded="true"] .pe-burger i:nth-child(2){opacity:0}
+.pe-menu-btn[aria-expanded="true"] .pe-burger i:nth-child(3){top:5px;transform:rotate(-45deg)}
+@keyframes pe-drop{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
+.pe-mobile-menu{position:absolute;left:12px;right:12px;top:calc(100% + 8px);background-color:rgba(13,18,28,.97);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:10px;box-shadow:0 30px 80px rgba(0,0,0,.55);animation:pe-drop .22s ease-out;display:flex;flex-direction:column}
+.pe-mobile-menu .pe-mm-link{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#E5E7EB;padding:15px 14px;border-radius:12px;font:500 17px 'Inter Tight',Inter,sans-serif;letter-spacing:-.01em}
+.pe-mobile-menu .pe-mm-link + .pe-mm-link{border-top:1px solid rgba(255,255,255,.06)}
+.pe-mobile-menu .pe-mm-link:hover{background-color:rgba(255,255,255,.05);color:#FFFFFF}
+.pe-mobile-menu .pe-mm-link svg{opacity:.45}
+.pe-mobile-menu .pe-mm-link[aria-current="page"]{background-color:rgba(245,158,11,.1);color:#FCD34D}
+.pe-mobile-menu .pe-mm-link[aria-current="page"] svg{opacity:1}
+.pe-mm-cta{margin:10px 4px 4px;display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:999px;background-color:#F59E0B;color:#0A0E14!important;font:600 16px Inter,sans-serif}
+.pe-mm-foot{display:flex;flex-direction:column;gap:2px;padding:10px 14px 6px;font-size:13px;color:#8D97A8}
+.pe-mm-foot a{color:#AEB6C4}
 @media (max-width:760px){.pe-menu-btn{display:inline-flex}}

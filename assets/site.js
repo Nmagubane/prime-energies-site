@@ -16,6 +16,9 @@
     var open = mb.getAttribute('aria-expanded') === 'true';
     mb.setAttribute('aria-expanded', open ? 'false' : 'true'); mm.hidden = open;
   });
+  function closeMenu() { if (mb && mm && !mm.hidden) { mm.hidden = true; mb.setAttribute('aria-expanded', 'false'); } }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+  document.addEventListener('click', function (e) { if (mm && mb && !mm.contains(e.target) && !mb.contains(e.target)) closeMenu(); });
   // Contact form: opens the visitor's email app with the message filled in
   var form = document.getElementById('pe-form');
   if (form) form.addEventListener('submit', function (e) {
