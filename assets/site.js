@@ -24,7 +24,7 @@
   if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
     var f = form.elements;
-    var subject = 'Briefing request — ' + f.company.value + ' (' + f.area.value + ')';
+    var subject = 'Briefing request: ' + f.company.value + ' (' + f.area.value + ')';
     var body = 'Name: ' + f.name.value + '\nCompany: ' + f.company.value + '\nEmail: ' + f.email.value +
                '\nArea of interest: ' + f.area.value + '\n\n' + f.message.value;
     window.location.href = 'mailto:info@primeenergies.co.za?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
