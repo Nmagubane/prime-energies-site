@@ -1,4 +1,4 @@
-body{margin:0;background:#0A0E14}
+body{margin:0;background:#0A0E14;overflow-x:hidden}
 a{color:#B45309;text-decoration:none}a:hover{color:#92400E}
 *{box-sizing:border-box}
 @keyframes pe-drift{from{stroke-dashoffset:0}to{stroke-dashoffset:-160}}
