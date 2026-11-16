@@ -58,6 +58,15 @@ button:focus-visible,a:focus-visible{outline:2px solid #F59E0B;outline-offset:3p
 .pe-newscard{transition:transform .25s ease,box-shadow .25s ease}
 .pe-newscard:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(10,14,20,.04),0 24px 56px rgba(10,14,20,.12)!important}
 .pe-more{transition:gap .2s ease}.pe-more:hover{gap:12px!important}
+@keyframes pe-in{from{opacity:.35;transform:translateY(14px)}to{opacity:1;transform:none}}
+.pe-in{animation-duration:.7s}
+@media (max-width:760px){
+nav > a.pe-btn{display:none!important}
+[aria-label="Console view"]{max-width:none!important;flex:1 1 100%!important;flex-direction:row!important;overflow-x:auto;border-right:none!important;border-bottom:1px solid rgba(255,255,255,.08);padding:10px!important}
+[aria-label="Console view"] button{white-space:nowrap;flex-shrink:0}
+#platform [style*="repeat(3, minmax(0, 1fr))"]{grid-template-columns:1fr!important;gap:10px!important}
+#platform [style*="min-height: 380px"]{min-height:0!important;padding:16px!important}
+}
 
 .pe-tabbtn{text-align:left;background:none;border:none;border-radius:10px;color:#8D97A8;font-family:Inter,sans-serif;font-size:14px;font-weight:500;padding:11px 14px;min-height:44px;cursor:pointer}
 .pe-tabbtn:hover{color:#F3F4F6}
