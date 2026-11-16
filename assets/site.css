@@ -60,6 +60,7 @@ button:focus-visible,a:focus-visible{outline:2px solid #F59E0B;outline-offset:3p
 .pe-flowy{background-image:repeating-linear-gradient(180deg,#F59E0B 0 10px,transparent 10px 20px);background-size:2px 40px;animation:pe-flowy 1.2s linear infinite}
 .pe-hub{animation:pe-glow 3s ease-in-out infinite}
 .pe-flow-v{display:none}
+@media (max-width:900px){.pe-flowwrap{flex-direction:column!important;flex-wrap:nowrap!important}.pe-flowwrap > div{flex:0 0 auto!important;width:100%}.pe-flowwrap > .pe-flow-v{width:2px!important;align-self:center!important;margin:6px 0!important}}
 @media (max-width:900px){.pe-pipe{grid-template-columns:repeat(2,minmax(0,1fr))!important;row-gap:44px!important}}
 @media (max-width:560px){.pe-pipe{grid-template-columns:1fr!important}}
 @media (max-width:900px){.pe-flow-h{display:none!important}.pe-flow-v{display:block}}
