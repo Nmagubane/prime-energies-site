@@ -42,6 +42,9 @@ button:focus-visible,a:focus-visible{outline:2px solid #F59E0B;outline-offset:3p
 @keyframes pe-floor{from{background-position:0 0}to{background-position:0 64px}}
 @keyframes pe-ping{0%{transform:scale(.2);opacity:.9}100%{transform:scale(3.2);opacity:0}}
 @keyframes pe-sweepx{from{transform:translateX(-30%)}to{transform:translateX(130%)}}
+@keyframes pe-flow{from{background-position:0 0}to{background-position:40px 0}}
+@keyframes pe-flowy{from{background-position:0 0}to{background-position:0 40px}}
+@keyframes pe-glow{0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,.35),0 0 60px rgba(245,158,11,.15)}50%{box-shadow:0 0 0 18px rgba(245,158,11,0),0 0 90px rgba(245,158,11,.3)}}
 @keyframes pe-chip{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 .pe-belt{display:flex;width:max-content;animation:pe-belt 80s linear infinite}
 .pe-ticker:hover .pe-belt{animation-play-state:paused}
@@ -53,6 +56,11 @@ button:focus-visible,a:focus-visible{outline:2px solid #F59E0B;outline-offset:3p
 .pe-ping{transform-box:fill-box;transform-origin:center;animation:pe-ping 3.6s ease-out infinite}
 .pe-pulse-line{stroke-dasharray:24 400;animation:pe-travel 5s linear infinite}
 .pe-chip{animation:pe-chip 6s ease-in-out infinite}
+.pe-flow{background-image:repeating-linear-gradient(90deg,#F59E0B 0 10px,transparent 10px 20px);background-size:40px 2px;animation:pe-flow 1.2s linear infinite}
+.pe-flowy{background-image:repeating-linear-gradient(180deg,#F59E0B 0 10px,transparent 10px 20px);background-size:2px 40px;animation:pe-flowy 1.2s linear infinite}
+.pe-hub{animation:pe-glow 3s ease-in-out infinite}
+.pe-flow-v{display:none}
+@media (max-width:900px){.pe-flow-h{display:none!important}.pe-flow-v{display:block}}
 .pe-beam{animation:pe-sweepx 7s linear infinite}
 .pe-d1{animation-delay:.12s}.pe-d2{animation-delay:.24s}.pe-d3{animation-delay:.36s}.pe-d4{animation-delay:.48s}
 .pe-newscard{transition:transform .25s ease,box-shadow .25s ease}
@@ -62,7 +70,9 @@ button:focus-visible,a:focus-visible{outline:2px solid #F59E0B;outline-offset:3p
 .pe-in{animation-duration:.7s}
 .pe-pill{display:inline-flex;align-items:center;gap:10px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#FCD9A0;border:1px solid rgba(245,158,11,.35);border-radius:999px;padding:8px 16px;background-color:rgba(245,158,11,.08)}
 .pe-pill-dot{width:6px;height:6px;border-radius:50%;background-color:#F59E0B;flex-shrink:0;box-shadow:0 0 0 4px rgba(245,158,11,.18)}
-@media (max-width:760px){.pe-ticker a{min-height:34px!important;padding:0 18px!important;font-size:12px!important}.pe-ticker > a:first-child{padding:0 12px!important;font-size:10px!important}}
+@media (max-width:760px){.pe-ticker a{min-height:34px!important;padding:0 18px!important;font-size:12px!important}.pe-ticker > a.pe-pulse-tag{padding:0 8px!important;font-size:9px!important}}
+.pe-show-sm{display:none}
+@media (max-width:760px){.pe-show-sm{display:inline}}
 @media (max-width:760px){.pe-pill{font-size:10.5px;letter-spacing:.1em;padding:7px 12px}}
 @media (max-width:760px){
 nav > a.pe-btn{display:none!important}
