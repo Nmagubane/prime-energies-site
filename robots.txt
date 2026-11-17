@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nmagubane.github.io/prime-energies-site/sitemap.xml
