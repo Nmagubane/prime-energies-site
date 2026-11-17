@@ -114,6 +114,9 @@ nav > a.pe-btn{display:none!important}
 #platform [style*="min-height: 380px"]{min-height:0!important;padding:16px!important}
 }
 
+select{-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:16px!important;line-height:1.4;padding-right:48px!important;background-repeat:no-repeat;background-position:right 18px center;background-size:14px 14px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M3 5l4 4 4-4' fill='none' stroke='%23F59E0B' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");cursor:pointer}
+select:invalid{color:#8D97A8!important}
+select option{color:#0A0E14;background-color:#FFFFFF}
 .pe-tabbtn{text-align:left;background:none;border:none;border-radius:10px;color:#8D97A8;font-family:Inter,sans-serif;font-size:14px;font-weight:500;padding:11px 14px;min-height:44px;cursor:pointer}
 .pe-tabbtn:hover{color:#F3F4F6}
 .pe-tabbtn[aria-pressed="true"]{background-color:rgba(245,158,11,.12);color:#FCD34D;font-weight:600}
